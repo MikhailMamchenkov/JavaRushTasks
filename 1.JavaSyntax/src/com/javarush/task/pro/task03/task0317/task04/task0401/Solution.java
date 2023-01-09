@@ -1,4 +1,4 @@
-package com.javarush.task.pro.task04.task0401;
+package com.javarush.task.pro.task03.task0317.task04.task0401;
 
 /* 
 Я никогда не буду работать за копейки

@@ -1,4 +1,4 @@
-package com.javarush.task.pro.task04.task0419;
+package com.javarush.task.pro.task03.task0317.task04.task0419;
 
 import java.util.Scanner;
 
