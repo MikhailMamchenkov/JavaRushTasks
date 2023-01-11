@@ -11,12 +11,11 @@ public class Solution {
     private static final String TRIANGLE_NOT_EXISTS = "треугольник не существует";
 
     public static void main(String[] args) {
-        //напишите тут ваш код
         Scanner scr = new Scanner(System.in);
         int a = scr.nextInt();
         int b = scr.nextInt();
         int c = scr.nextInt();
-        if (a + b < c || b + c < a || c + a < b) {
+        if (((a + b) > c) && ((b + c) > a) && ((c + a) > b)) {
             System.out.println(TRIANGLE_EXISTS);
         }
         else {
