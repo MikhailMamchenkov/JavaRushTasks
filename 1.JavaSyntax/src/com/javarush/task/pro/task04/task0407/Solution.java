@@ -7,14 +7,14 @@ package com.javarush.task.pro.task04.task0407;
 public class Solution {
     public static void main(String[] args) {
         //напишите тут ваш код
-        int x = 1;
+        int i = 0;
         int sum = 0;
-        while (x <= 100) {
-            if (x % 3 != 0) {
-                sum += x;
+        while (i < 100) {
+            i++;
+            if (i % 3 == 0) {
+                continue;
             }
-            x++;
-            continue;
+            sum += i;
         }
         System.out.println(sum);
     }
