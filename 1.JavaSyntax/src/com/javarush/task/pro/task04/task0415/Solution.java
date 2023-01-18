@@ -14,7 +14,7 @@ public class Solution {
 
         while (scanner.hasNextInt()) {
             int inputNumber = scanner.nextInt();
-            if (inputNumber < 0) {
+            if (!(inputNumber % 1 == 0)) {
                 System.out.println("Введите целое число");
             } else {
                 s = pi * inputNumber * inputNumber;
