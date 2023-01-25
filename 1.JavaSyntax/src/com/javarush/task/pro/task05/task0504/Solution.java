@@ -4,6 +4,7 @@ package com.javarush.task.pro.task05.task0504;
 Объединяем массивы
 */
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Solution {
