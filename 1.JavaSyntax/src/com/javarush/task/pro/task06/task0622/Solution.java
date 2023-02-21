@@ -3,7 +3,7 @@ package com.javarush.task.pro.task06.task0622;
 import java.util.Scanner;
 
 /* 
-Диабло (1)
+Диабло (3)
 */
 
 public class Solution {
@@ -14,37 +14,38 @@ public class Solution {
     public static String amigoAttackPhrase = "Удар Амиго достиг цели. Диабло потерял 3 жизни.";
     public static String winPhrase = "Амиго одержал победу над Диабло и выбил из его головы загадочный кристалл.";
     public static String loosePhrase = "Диабло победил Амиго.";
+    public static int diabloPosition;
     public static int amigoLives = 9;
     public static int diabloLives = 9;
-    public static int diabloPosition;
 
     public static void main(String[] args) {
         diabloPosition = getRandomNumber(4);
+
         findDiablo();
+
+        battle();
     }
 
     public static void findDiablo() {
-        System.out.println(getFirstPositionPhrase);
         Scanner scanner = new Scanner(System.in);
+        System.out.println(getFirstPositionPhrase);
         while (true) {
-            int num = scanner.nextInt();
-            if (num != diabloPosition) {
-                System.out.println(getPositionPhrase);
-            } else {
+            int position = scanner.nextInt();
+            if (position == diabloPosition) {
                 System.out.println(findDiabloPhrase);
                 break;
+            } else {
+                System.out.println(getPositionPhrase);
             }
-
         }
-
     }
 
     public static void amigoLostLife() {
-        amigoLives = amigoLives - 1;
+        amigoLives--;
     }
 
     public static void diabloLostLife() {
-        diabloLives = diabloLives - 3;
+        diabloLives -= 3;
     }
 
     public static int amigoAttacks() {
@@ -55,6 +56,17 @@ public class Solution {
         return getRandomNumber(3);
     }
 
+    public static void battle() {
+        while (diabloLives > 0 && amigoLives > 0) {
+            if (amigoAttacks() == diabloDefends()) {
+                System.out.println(diabloDefendPhrase);
+                amigoLostLife();
+            } else {
+                System.out.println(amigoAttackPhrase);
+                diabloLostLife();
+            }
+        }
+    }
 
     public static int getRandomNumber(int range) {
         return (int) (Math.random() * range) + 1;
