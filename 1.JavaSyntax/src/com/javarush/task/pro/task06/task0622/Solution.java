@@ -3,7 +3,7 @@ package com.javarush.task.pro.task06.task0622;
 import java.util.Scanner;
 
 /* 
-Диабло (3)
+Диабло (4)
 */
 
 public class Solution {
@@ -24,6 +24,12 @@ public class Solution {
         findDiablo();
 
         battle();
+
+        if (isAmigoWin()) {
+            System.out.println(winPhrase);
+        } else {
+            System.out.println(loosePhrase);
+        }
     }
 
     public static void findDiablo() {
@@ -66,6 +72,10 @@ public class Solution {
                 diabloLostLife();
             }
         }
+    }
+
+    public static boolean isAmigoWin() {
+        return diabloLives == 0;
     }
 
     public static int getRandomNumber(int range) {
