@@ -3,7 +3,7 @@ package com.javarush.task.pro.task05.task0529;
 import java.util.Arrays;
 
 /* 
-Галаксианские роботанки (1)
+Галаксианские роботанки (2)
 */
 
 public class Solution {
@@ -18,6 +18,12 @@ public class Solution {
         for (int i = 0; i < field.length; i++) {
             Arrays.fill(field[i], empty);
         }
+
+        for (int i = 0; i < field.length; i++) {
+            int j = (int) (Math.random() * width);
+            field[i][j] = robotank;
+        }
+
         for (int i = 0; i < field.length; i++) {
             for (int j = 0; j < field[i].length; j++) {
                 System.out.print(field[i][j]);
@@ -26,4 +32,3 @@ public class Solution {
         }
     }
 }
-
