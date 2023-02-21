@@ -3,7 +3,7 @@ package com.javarush.task.pro.task05.task0529;
 import java.util.Arrays;
 
 /* 
-Галаксианские роботанки (2)
+Галаксианские роботанки (3)
 */
 
 public class Solution {
@@ -13,6 +13,7 @@ public class Solution {
     public static int width = 30;
     public static int height = 10;
     public static String[][] field = new String[height][width];
+    public static int[][] bombs = new int[height][width];
 
     public static void main(String[] args) {
         for (int i = 0; i < field.length; i++) {
@@ -22,6 +23,17 @@ public class Solution {
         for (int i = 0; i < field.length; i++) {
             int j = (int) (Math.random() * width);
             field[i][j] = robotank;
+        }
+
+        for (int i = 0; i < bombs.length; i++) {
+            int bombCount = 10;
+            while (bombCount > 0) {
+                int j = (int) (Math.random() * width);
+                if (bombs[i][j] == 0) {
+                    bombs[i][j] = 1;
+                    bombCount--;
+                }
+            }
         }
 
         for (int i = 0; i < field.length; i++) {
