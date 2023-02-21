@@ -3,7 +3,7 @@ package com.javarush.task.pro.task05.task0529;
 import java.util.Arrays;
 
 /* 
-Галаксианские роботанки (3)
+Галаксианские роботанки (4)
 */
 
 public class Solution {
@@ -32,6 +32,14 @@ public class Solution {
                 if (bombs[i][j] == 0) {
                     bombs[i][j] = 1;
                     bombCount--;
+                }
+            }
+        }
+
+        for (int i = 0; i < field.length; i++) {
+            for (int j = 0; j < field[i].length; j++) {
+                if (bombs[i][j] == 1 && robotank.equals(field[i][j])) {
+                    field[i][j] = hit;
                 }
             }
         }
