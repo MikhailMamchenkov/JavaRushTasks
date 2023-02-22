@@ -9,8 +9,4 @@ public class Solution {
     short b = Short.MAX_VALUE;
     int c = Integer.MAX_VALUE;
     long d = Long.MAX_VALUE;
-    float e;
-    double f;
-    boolean g;
-    char i;
 }
