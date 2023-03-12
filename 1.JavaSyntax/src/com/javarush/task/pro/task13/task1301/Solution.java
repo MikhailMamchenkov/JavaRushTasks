@@ -36,7 +36,4 @@ public class Solution {
            return set;
         }
 
-/*    public static HashSet<String> arrayToHashSet(String[] strings) {
-        return new HashSet<>(Arrays.asList(strings));
-    }*/
 }
